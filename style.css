@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); 
+
+/* BASE STYLES */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Poppins;
+	line-height: 1.7;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+input, button {
+	font-family: inherit;
+	cursor: pointer;
+}
+
+/* HEADER */
+.header {
+	min-height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('images/banner.png') no-repeat center / cover;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 7%;
+	max-height: 100px;
+	overflow: hidden;
+	transition: max-height .3s ease-in;
+}
+
+.logo {
+	width: 140px;
+	cursor: pointer;
+}
+
+.navbar-links li {
+	display: inline-block;
+	margin: 10px 30px;
+}
+
+.navbar-links li a {
+	color: #FFF;	
+}
+
+.active {
+	position: relative;
+}
+
+.active::after {
+	content: '';
+	background-color: #FFF;
+	width: 25px;
+	height: 2px;
+	position: absolute;
+	left: 50%;
+	translate: -50% 0;
+	bottom: -12px;
+	border-radius: 2px;
+}
+
+.register-btn {
+	background-color: #FFF;
+	color: #000;
+	padding: 8px 20px;
+	border-radius: 20px;
+	font-size: .9rem;
+}
+
+.navbar .fa-bars {
+	color: #FFF;
+	display: none;
+}
+
+.container {
+	padding: 0 7%;
+}
+
+.header h1 {
+	font-size: 4vw;
+	font-weight: 500;
+	color: #FFF;
+	text-align: center;
+	padding-top: 22%;
+}
+
+.search-bar {
+	background-color: #FFF;
+	width: 70%;
+	margin: 30px auto;
+	padding: 6px 10px 6px 30px;
+	border-radius: 50px;
+}
+
+.search-bar form {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.search-bar form input {
+	display: block;
+	border: 0;
+	outline: none;
+	background: transparent;
+}
+
+.search-bar form button {
+	background-color: #FF5361;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.search-bar form button img {
+	width: 15px;
+	margin-top: 7px;
+}
+
+.search-bar form label {
+	font-weight: 600;
+}
+
+.location {
+	flex: 1;
+}
+
+.location input {
+	width: 100%;
+}
+
+/* EXCLUSIVES SECTION */
+.subtitle {
+	margin: 50px 0 20px;
+	font-size: 2.2vw;
+	font-weight: 500;
+	color: #333;
+}
+
+.exclusives {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+}
+
+.exclusives div img {
+	border-radius: 10px;
+}
+
+.exclusives div {
+	position: relative;
+	font-size: .95rem;
+	position: relative;
+}
+
+.exclusives div span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	text-align: center;
+	color: #FFF;
+}
+
+/* TRENDING PLACES SECTION */
+.trending {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	margin-bottom: 30px;
+}	
+
+.trending div img {
+	border-radius: 10px;
+}
+
+.trending h3 {
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+/* CTA SECTION */
+.cta {
+	margin: 80px 0;
+	background: linear-gradient(to right, #3F2321, transparent), url('images/banner-2.png') no-repeat center / cover;
+	border-radius: 10px;
+	padding: 5%;
+	color: #FFF;
+}
+
+.cta h3 {
+	font-size: 4vw;
+	font-weight: 500;
+	line-height: 5.3vw;
+}
+
+.cta p {
+	font-size: 1.2rem;
+	margin: 10px 0;
+}
+
+.cta-btn {
+	background-color: #FF5361;
+	color: #FFF;
+	display: inline-block;
+	padding: 12px 30px;
+	margin-top: 20px;
+	border-radius: 8px;
+}
+
+.cta-btn:hover {
+	background-color: #de2534;
+}
+
+/* TRAVLLERS STORIES SECTION */
+.stories {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	margin-bottom: 30px;	
+}
+
+.stories div img {
+	border-radius: 10px;
+}
+
+.stories p {
+	width: 70%;
+	margin: 20px auto;
+	text-align: center;
+	color: #333;
+	font-size: 1.2rem;
+
+}
+
+.start-btn {
+	color: #FFF;
+	background-color: #FF5361;
+	display: block;
+	width: 80%;
+	max-width: 350px;
+	text-align: center;
+	margin: 80px auto;
+	padding: 15px;
+	border-radius: 30px;
+	font-size: 1.25rem;
+}
+
+/* ABOUT SECTION */
+.about-msg {
+	margin: 90px 0;
+	color: #333;
+	font-size: 1.1rem;
+	text-align: center;
+	line-height: 1.9;
+}
+
+.about-msg h2 {
+	font-size: 1.75rem;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+	text-align: center;
+	margin: 80px 0 10px;
+}
+
+.footer a {
+	color:  #999;
+	font-size: 1.4rem;
+	margin: 0 10px;
+}
+
+.footer hr {
+	background-color: #999;
+	height: 1px;
+	width: 100%;
+	border: 0;
+	margin: 20px 0;
+}
+
+.footer p {
+	padding-bottom: 15px;
+}
+
+/* LISTING PAGE */
+.navbar-white {
+	background-color: #FFF;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
+}
+
+.navbar-white .navbar-links li a {
+	color: #333;
+}
+
+.navbar-white .register-btn {
+	background-color: #FF5361;
+	color: #FFF;
+}
+
+.navbar-white .active::after {
+	background-color: #FF5361;
+}
+
+.list-container {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.left-col {
+	flex-basis: 70%;
+}
+
+.left-col h2 {
+	color: #333;
+	font-weight: 600;
+	font-size: 2rem;
+	margin: 0 0 30px;
+}
+
+.right-col {
+	flex-basis: 25%;
+}
+
+.house {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 30px 0;
+	border-top: 1px solid #CCC;
+}
+
+.house-img {
+	flex-basis: 40%;
+}
+
+.house-img  img {
+	border-radius: 12px;
+}
+
+.house-info {
+	flex-basis: 58%;
+	color: #555;
+}
+
+.house-info h3 {
+	font-weight: 600;
+	font-size: 1.4rem;
+	color: #333;
+	margin: 4px 0;
+}
+
+.house-info .rating {
+	color: #FF5361;
+	font-size: 1.1rem;
+	margin: 10px 1px;
+}
+
+.house-price {
+	text-align: right;
+}
+
+.house-price h4 {
+	font-size: 1.25rem;
+}
+
+.house-price h4 span {
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+.sidebar {
+	border: 1px solid #999;
+	padding: 20px 30px;
+	margin-top: 30px;
+}
+
+.sidebar h2 {
+	font-weight: 500;
+}
+
+.sidebar h3 {
+	font-weight: 500;
+	margin: 20px 0 10px;
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+.filter p {
+	flex: 1;
+}
+
+.filter input {
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.sidebar-link {
+	text-align: right;
+	margin: 30px 0 10px;
+}
+
+.sidebar-link a:hover {
+	border-bottom: 1px solid #333;
+}
+
+.sidebar-link a {
+	color: #333;
+	padding: 4px;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 40px 0;
+}
+
+.pagination img {
+	width: 15px;
+	margin: 10px 20px;
+}
+
+.pagination img:nth-of-type(2) {
+	rotate: 180deg;
+}
+
+.pagination span {
+	margin: 10px 8px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 20%;
+	cursor: pointer;
+}
+
+.pagination span:nth-of-type(1) {
+	background-color: #333;
+	color: #FFF;
+}
+
+/* HOUSE DETAILS PAGE */
+.house-details {
+	padding: 0 12%;
+}
+
+.house-title {
+	margin-top: 50px;
+}
+
+.house-title h2 {
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+.house-title .row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.house-title span {
+	margin: 0 20px;
+}
+
+.house-title i {
+	color: #FF5361;
+	font-size:  .9rem;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.gallery div {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.gallery div:nth-of-type(1) {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 2;
+}
+
+.small-details h2 {
+	font-weight: 500;
+}
+
+.small-details h4 {
+	text-align: right;
+	font-size: 1.4rem;
+}
+
+.line {
+	border: 0;
+	height: 1px;
+	background-color: #CCC;
+	width: 100%;
+	max-width: 800px;
+	margin: 20px 0 50px;
+}
+
+.check-form {
+	margin: 30px 0;
+	background-color: #FFF;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+	border-radius: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 50px;
+	align-items: center;
+}
+.check-form label {
+	display: block;
+}
+
+.check-form div {
+	padding: 20px;
+}
+
+.check-form div:nth-of-type(3) {
+	flex: 1;
+}
+
+.check-form input {
+	background: transparent;
+	outline: none;
+	border: none;
+}
+
+.check-form button {
+	background-color: #FF5361;
+	border: 0;
+	outline: none;
+	color: #FFF;
+	padding: 18px;
+	width: 350px;
+	border-radius: 8px;
+	font-size: 1rem;
+}
+
+.details-list {
+	margin: 50px 0;
+}
+
+.details-list li {
+	margin-left: 50px;
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-bottom: 20px;
+	color: #555;
+	position: relative;
+}
+
+.details-list li p {
+	margin-left: 15px;
+}
+
+.details-list li span {
+	display: block;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.details-list li i {
+	position: absolute;
+	margin-right: 100px;
+	top: 15px;
+	left: -40px;
+	font-size: 1.5rem;
+}
+
+.home-desc {
+	max-width: 700px;
+	margin-bottom: 50px;
+}
+
+.map {
+	margin: 50px 0;
+}
+
+.map iframe {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.map h3 {
+	font-size: 1.6rem;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+
+.map b {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.host {
+	display: flex;
+	align-items: center;
+}
+
+.host img {
+	width: 80px;
+	border-radius: 50%;
+	margin-right: 30px;
+}
+
+.host h2 {
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.host i {
+	color: #FF5361;
+}
+
+.contact-host {
+	display: inline-block;
+	margin: 40px 0 40px 120px;
+	color: #555;
+	border-radius: 8px;
+	border: 1px solid #555;
+	padding: 15px 45px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 700px) {
+	.logo {
+		position: fixed;
+		top: 4%;
+		left: 7%;
+	}
+
+	.navbar {
+		position: fixed;
+		top: 0;
+		z-index: 2;
+		display: inline-block;
+		width: 100%;
+		padding: 100px 7% 0;
+		background-color: #000;
+		text-align: right;
+	}
+
+	.navbar-white {
+		background-color: #FFF;
+	}
+
+	.navbar-white .fa-bars {
+		color: #000;
+	}
+
+	.navbar-white .active::after {
+		background-color: #333;
+	}
+
+	.navbar .navbar-links li {
+		margin: 25px 0;
+		display: block;
+	}
+
+	.register-btn {
+		margin: 15px 0 30px;
+		display: inline-block;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		position: fixed;
+		top: 4%;
+		right: 7%;
+		font-size: 1.6rem;
+		cursor: pointer;
+	}
+
+	.active::after {
+		left: -40px;
+		translate: 0 50%;
+		bottom: 50%;
+	}
+
+	.hide-menu {
+		max-height: 400px;
+	}
+
+	.header h1 {
+		padding-top: 200px;
+		font-size: 5vw;
+	}
+
+	.search-bar {
+		width: 90%;
+		margin: 30px auto;
+		padding: 20px 10px 30px;
+		border-radius: 5px;
+		position: relative;
+	}
+
+	.search-bar form {
+		display: block;
+	}
+
+	.search-bar form input {
+		border-bottom: 1px solid #DDD;
+		width: 100%;
+		margin: 10px 0 20px;
+		padding-bottom: 8px;
+	}
+
+	.search-bar form button {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		translate: -50% 50%;
+	}
+
+	.subtitle {
+		font-size: 5vw;
+	}
+
+	.cta {
+		padding: 15% 5%;
+	}
+
+	.cta h3 {
+		font-size: 5vw;
+		line-height: 8vw;
+	}
+
+	.cta p {
+		font-size: .9rem;
+	}
+
+	.cta-btn {
+		padding: 6px 15px;
+		border-radius: 4px;
+		margin-top: 10px;
+		font-size: .9rem;
+	}
+
+	.stories p {
+		font-size: 1.1rem;
+	}
+
+	.start-btn {
+		padding: 15px 30px;
+		font-size: 1rem;
+		width: fit-content;
+	}
+
+	.list-container {
+		margin-top: 150px;
+	}
+
+	.left-col, .right-col, .house-img, .house-info {
+		flex-basis: 100%;
+	}
+
+	.left-col h2 {
+		font-size: 1.4rem;
+	}
+
+	.house-info h3 {
+		font-size: 1.1rem;
+	}
+
+	.house-info .rating {
+		font-size: 1rem;
+	}
+
+	.pagination span {
+		width: 30px;
+		height: 30px;
+		margin: 10px 2px;
+		line-height: 30px;
+		font-size: .85rem;
+	}
+
+	.pagination img {
+		width: 10px;
+	}
+
+	.house-details {
+		margin-top: 150px;
+	}
+
+	.row p {
+		margin-top: 10px;
+	}
+
+	.gallery {
+		grid-template-columns: 1fr;
+	}
+
+	.gallery div:nth-of-type(1) {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+	}
+
+	.small-details h2 {
+		font-size: 1.25rem;
+		margin-top: 1.5rem;
+	}
+
+	.check-form {
+		padding: 10px 30px;
+	}
+
+	.check-form div {
+		padding: 20px 0;
+		width: 100%;
+	}
+
+	.check-form input {
+		border-bottom: 1px solid #CCC;
+		width: 100%;
+		padding-bottom: 5px;
+	}
+
+	.check-form button {
+		font-size: .9rem;
+		margin: 10px 0 15px;
+		border-radius: 4px;
+		width: 100%;
+	}
+
+	.host {
+		display: block;
+		line-height: 28px;
+	}
+
+	.contact-host {
+		margin: 40px 0;
+	} 
+}
+
